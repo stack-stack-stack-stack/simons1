@@ -1,4 +1,4 @@
-class Popup {
+class ChickenPopup {
   constructor() {
     const addEventClick = (selector: string, eventHandler: () => void) => {
       document?.querySelector(selector)?.addEventListener('click', eventHandler);
@@ -33,9 +33,9 @@ class Popup {
     const translate = (itemEl: NodeListOf<HTMLInputElement>) => Array.from(itemEl).reduce<
       string[]
     >((acc, el) => {
-      const menu = el.value;
+      const menuId = el.value;
 
-      acc.push(menu);
+      acc.push(this.getFoodName(menuId));
 
       return acc;
     },[])
@@ -53,8 +53,23 @@ class Popup {
 
     this.closeModal();
   }
+
+  getFoodName(key: string): string {
+    switch(key) {
+      case 'a':
+        return '모리치킨(2마리)';
+      case 'b':
+        return '맵고마치킨(1마리)';
+      case 'c':
+        return '치즈크리스피치킨(1마리)';
+      case 'd':
+        return '허니갈릭치킨(1마리)';
+      default:
+        return '';
+    }
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  new Popup();
+  new ChickenPopup();
 });
