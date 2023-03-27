@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chicken</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="simons-modal-wrapper customer-settle-modal-wrapper">
+    <header class="flex justify-center mb-5 mt-5">
+        <div><i class="fa-solid fa-drumstick-bite mr-1"></i>치킨 선택</div>
+    </header>
+
+    <div class="content">
+        <section class="p-2">
+            <table class="table w-full">
+                <colgroup>
+                    <col style="width: 5%;"/>
+                    <col style="width: 20%;"/>
+                    <col style="width: *;"/>
+                    <col style="width: 10%;"/>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col"><input name="allCheck" id="allCheck" title="전체" type="checkbox" value="checkbox" /></th>
+                    <th scope="col">치킨 이름</th>
+                    <th scope="col">설명</th>
+                    <th scope="col">사이즈</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-center">
+                        <label>
+                            <input name="pNo" type="checkbox" value="모리치킨(2마리)">
+                        </label>
+                    </td>
+                    <td class="text-center">모리 치킨</td>
+                    <td class="text-center">그냥 모리 치킨이 최고임!!</td>
+                    <td class="text-center">2마리</td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <label>
+                            <input name="pNo" type="checkbox" value="맵고마치킨(1마리)">
+                        </label>
+                    </td>
+                    <td class="text-center">맵고마치킨</td>
+                    <td class="text-center">하바네로 고추와 땡초, 마늘까지 더한 상상초월 화끈한 맛!</td>
+                    <td class="text-center">1마리</td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <label>
+                            <input name="pNo" type="checkbox" value="치즈크리스피치킨(1마리)">
+                        </label>
+                    </td>
+                    <td class="text-center">치즈크리스피치킨</td>
+                    <td class="text-center">통으로 간 후추와 특제 간장소스를 더한 매콤 짭짤한 맛!</td>
+                    <td class="text-center">1마리</td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <label>
+                            <input name="pNo" type="checkbox" value="허니갈릭치킨(1마리)">
+                        </label>
+                    </td>
+                    <td class="text-center">허니갈릭치킨</td>
+                    <td class="text-center">마늘의 풍미와 꿀의 달콤함이 환상적인 조화를 이루다!</td>
+                    <td class="text-center">1마리</td>
+                </tr>
+                </tbody>
+            </table>
+            <input type="hidden" id="headMap" />
+        </section>
+    </div>
+    <div class="action mt-10 flex justify-center">
+        <button id="addButton" class="border-solid border-2 border-sky-500 px-2 mr-5 rounded-md">추가</button>
+        <button id="cancelButton" class="border-solid border-2 border-sky-500 px-2 rounded-md">닫기</button>
+    </div>
+</div>
+<script type="module" src="./src/popups/chicken.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="simons-modal-wrapper customer-settle-modal-wrapper">
+    <header class="flex justify-center mb-5 mt-5">
+        <div><i class="fa-solid fa-pizza-slice mr-1"></i>피자 선택</div>
+    </header>
+
+    <div class="content">
+        <section class="p-2">
+            <table class="table w-full">
+                <colgroup>
+                    <col style="width: 5%;"/>
+                    <col style="width: 20%;"/>
+                    <col style="width: *;"/>
+                    <col style="width: 10%;"/>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col"><input name="allCheck" id="allCheck" title="전체" type="checkbox" value="checkbox" /></th>
+                    <th scope="col">피자 이름</th>
+                    <th scope="col">설명</th>
+                    <th scope="col">사이즈</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-center">
+                        <label>
+                            <input name="pNo" type="checkbox" value="핫마요피자(M)">
+                        </label>
+                    </td>
+                    <td class="text-center">핫마요피자</td>
+                    <td class="text-center">매콤하고 부드러운 마요소스에 스모크소세지와 감자의 찐한 만남</td>
+                    <td class="text-center">M</td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <label>
+                            <input name="pNo" type="checkbox" value="트리플바비큐피자(L)">
+                        </label>
+                    </td>
+                    <td class="text-center">트리플바비큐피자</td>
+                    <td class="text-center">숯불 특유의 그윽한 향과 세 가지 맛(비프 스트립+바비큐치킨+베이컨)의 매콤한 바비큐!</td>
+                    <td class="text-center">L</td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <label>
+                            <input name="pNo" type="checkbox" value="스위트불고기피자(M)">
+                        </label>
+                    </td>
+                    <td class="text-center">스위트불고기피자</td>
+                    <td class="text-center">토마토소스와 특제 불고기 소스를 믹싱하여 불고기 맛이 강하며, 불고기 토핑의 풍부한 육즙이 느껴지 ...</td>
+                    <td class="text-center">M</td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <label>
+                            <input name="pNo" type="checkbox" value="치즈피자(L)">
+                        </label>
+                    </td>
+                    <td class="text-center">치즈피자</td>
+                    <td class="text-center">피자맛은 치즈가 진리~ 99% 자연 치즈와 파마산 치즈, 토마토 소스의 기가막힌 조화! 치즈 매 ...</td>
+                    <td class="text-center">L</td>
+                </tr>
+                </tbody>
+            </table>
+            <input type="hidden" id="headMap" />
+        </section>
+    </div>
+    <div class="action mt-10 flex justify-center">
+        <button id="addButton" class="border-solid border-2 border-sky-500 px-2 mr-5 rounded-md">추가</button>
+        <button id="cancelButton" class="border-solid border-2 border-sky-500 px-2 rounded-md">닫기</button>
+    </div>
+</div>
+<script type="module" src="./src/popups/pizza.js"></script>
+</body>
+</html>
